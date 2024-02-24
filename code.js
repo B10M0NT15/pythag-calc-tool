@@ -4,13 +4,13 @@ function changeLbls() {
   if (sideSolve === "a") {
     //change labels to b & c
     document.getElementById("label-a").textContent = "Leg (b)";
-    document.getElementById("label-b").textContent = "Leg (c)";
+    document.getElementById("label-b").textContent = "Hypotenuse";
     return;
   }
   if (sideSolve === "b") {
     //change labels to a & c
     document.getElementById("label-a").textContent = "Leg (a)";
-    document.getElementById("label-b").textContent = "Leg (c)";
+    document.getElementById("label-b").textContent = "Hypotenuse";
     return;
   }
   if (sideSolve === "c") {
