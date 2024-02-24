@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./code.js"></script>
     <meta charset="UTF-8" />
@@ -9,16 +15,28 @@
   </head>
 
   <body>
-    <div class="box-1" style="border: 1px solid green; padding: 20px">
-      <div class="frame-a" style="border: 1px solid red">
-        <label for="side-a">side a</label>
+    <div class="box-1">
+      <div>
+        <label for="side-selector">Solve for...</label>
+        <select onchange="changeLbls()" name="side-selector" id="side-selector">
+          <option value="a">Leg(a)</option>
+          <option value="b">Leg(b)</option>
+          <option value="c">Hypotenuse</option>
+        </select>
+      </div>
+      <div class="frame-a">
+        <label id="label-a" for="side-a">side 1</label>
         <input name="side-a" type="number" id="side-a" />
       </div>
-      <div class="frame-a" style="border: 1px solid blue">
-        <label for="side-b">side b</label>
+      <div class="frame-a" s>
+        <label id="label-b" for="side-b">side 2</label>
         <input name="side-b" type="number" id="side-b" />
       </div>
-      <button onclick="calculate()">Calculator</button>
+      <button onclick="calculate()">calculate</button>
+    </div>
+    <div>
+      <span>Answer:</span>
+      <span id="result"></span>
     </div>
   </body>
 </html>
