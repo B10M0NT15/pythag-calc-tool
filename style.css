@@ -6,6 +6,44 @@
   align-items: center;
 }
 
+/* style.css */
+
+.holder > div {
+  /* width: 100px; */
+  /*   height: 5px; */
+  background-color: blue;
+  position: absolute;
+  border-radius: 5px;
+}
+.holder {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 5px solid transparent;
+}
+
+#side-alpha {
+  height: 5px;
+  width: 350px;
+  bottom: 49.5%;
+  right: -20%;
+  transform: translate(0%, 50%);
+  transform: rotate(-45deg);
+  border-radius: 5px;
+}
+
+#side-beta {
+  right: 0;
+  width: 5px;
+  height: 100%;
+}
+
+#side-creek {
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+}
+
 body {
   position: fixed;
   inset: 0;

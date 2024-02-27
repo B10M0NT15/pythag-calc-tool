@@ -1,22 +1,40 @@
+function highlightSide(side) {
+  const hypo = document.getElementById("side-alpha");
+  const vert = document.getElementById("side-beta");
+  const horiz = document.getElementById("side-creek");
+  const sideObj = {
+    a: horiz,
+    b: vert,
+    c: hypo,
+  };
+  const arr = [hypo, vert, horiz];
+  arr.forEach((item) => (item.style.backgroundColor = "blue"));
+  sideObj[side].style.backgroundColor = "red";
+}
+
 function changeLbls() {
   console.log("Yoooo");
   const sideSolve = document.getElementById("side-selector").value;
+  highlightSide(sideSolve);
+  const labelA = document.getElementById("label-a");
+  const labelB = document.getElementById("label-b");
+
   if (sideSolve === "a") {
     //change labels to b & c
-    document.getElementById("label-a").textContent = "Leg (b)";
-    document.getElementById("label-b").textContent = "Hypotenuse";
+    labelA.textContent = "Leg (b)";
+    labelB.textContent = "Hypotenuse";
     return;
   }
   if (sideSolve === "b") {
     //change labels to a & c
-    document.getElementById("label-a").textContent = "Leg (a)";
-    document.getElementById("label-b").textContent = "Hypotenuse";
+    labelA.textContent = "Leg (a)";
+    labelB.textContent = "Hypotenuse";
     return;
   }
   if (sideSolve === "c") {
     //change labels to a & b
-    document.getElementById("label-a").textContent = "Leg (a)";
-    document.getElementById("label-b").textContent = "Leg (b)";
+    labelA.textContent = "Leg (a)";
+    labelB.textContent = "Leg (b)";
     return;
   }
 }
